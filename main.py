@@ -32,13 +32,13 @@ def configureSettings():
         global numPassword
         print("Current number of passwords: " + str(numPassword))
         numPassword = int(input("Set to: "))
+        configureSettings()
     elif (settingsSelection == "2"):
         clearTerminal()
         global passwordLength
         print("Current password length: " + str(passwordLength))
         passwordLength = int(input("Set to: "))
-    else:
-        input("Press enter to continue...")
+        configureSettings()
 
 while (str(selection) != "3"):
     clearTerminal()
